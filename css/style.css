@@ -1,5 +1,7 @@
 h1 {
     text-align: center;
+    font-weight: bold;
+    color: white;
 }
 
 #cart {
@@ -7,6 +9,8 @@ h1 {
     justify-content: center;
     border-top: 5px solid black;
     border-bottom: 5px solid black;
+    background-color: #ff383b;
+    color: white;
 }
 
 .column {
@@ -63,4 +67,15 @@ input {
 button {
     font-size: 14px;
     padding: 5px 10px;
+    color: black;
+    background-color: white;
+}
+
+body {
+    font-family: 'Limelight', cursive;
+    background-color: black;
+}
+
+p {
+    color: white;
 }
