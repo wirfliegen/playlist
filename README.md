@@ -38,7 +38,7 @@
 - [x] Display the result to the screen
 
 ### Wrap
-- [ ] Push your changes!
+- [x] Push your changes!
 
 ## Extensions
 - [x] Update the HTML and CSS to reflect your own style.
