@@ -73,8 +73,16 @@ var links = [
     "https://www.youtube.com/watch?v=5SLd2VaIvJw"
 ];
 
-   // BELOW Use forEach Loop to display the data from each of your array's in the correct div
-   
+function addSongInfo(){
+    // BELOW write the code to add new items to each of the arrays.
+    if($("#song").val() != "" && $("#song").val() != "" && $("#song").val() != "" && $("#song").val() != "" && $("#song").val()!= ""){
+        songs.push($("#song").val());
+        artists.push($("#artist").val());
+        images_links.push($("#image").val());
+        song_lengths.push($("#length").val());
+        links.push($("#link").val());
+    }
+}
 
 function emptySongInfo(){
     $("#songs").empty();
@@ -104,7 +112,7 @@ function displaySongInfo(){
     });
     
     links.forEach(function(link) {
-        $("#links").append("<a href='" + link + "'>Listen Here</a>");
+        $("#links").append("<a href='" + link + "'>Listen Here</a>")
     });
 }
 
