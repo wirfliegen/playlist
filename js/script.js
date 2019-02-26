@@ -44,6 +44,20 @@ var artists = [
     "Yumi Kawamura",
     "Yumi Kawamura, Lotus Juice"
 ];
+
+var games = [
+    "Persona Q2: New Cinema Labyrinth",
+    "Persona 4: Dancing All Night",
+    "Persona 3",
+    "Persona 2: Innocent Sin",
+    "Persona Q: Shadow Of The Labyrinth",
+    "Persona 5: Dancing In Starlight",
+    "Persona 4",
+    "Persona 3: Dancing In Moonlight",
+    "Persona 5",
+    "Persona 3 The Movie #1: Spring of Birth",
+    "Persona 3 FES"
+];
     
 var song_lengths = [
     "4:19", 
@@ -81,6 +95,7 @@ function addSongInfo(){
         images_links.push($("#image").val());
         song_lengths.push($("#length").val());
         links.push($("#link").val());
+        games.push($("#game").val());
     }
 }
 
@@ -91,6 +106,7 @@ function emptySongInfo(){
     $("#artists").empty();
     $("#lengths").empty();
     $("#links").empty();
+    $("#games").empty();
 }
 
 function displaySongInfo(){
@@ -114,6 +130,9 @@ function displaySongInfo(){
     links.forEach(function(link) {
         $("#links").append("<a href='" + link + "'>Listen Here</a>")
     });
+    games.forEach(function(game) {
+        $("#games").append("<p>from " + game + "</p>")
+    });
 }
 
 $("#add").click(function() {
@@ -122,12 +141,14 @@ $("#add").click(function() {
     var imageLink = $("#image").val();
     var songLength = $("#length").val();
     var songLink = $("#link").val();
+    var game = $("game").val();
     
     songs.push(songName);
     images_links.push(artistName);
     artists.push(imageLink);
     song_lengths.push(songLength);
     links.push(songLink);
+    games.push(game);
 
     emptySongInfo();
     displaySongInfo();
