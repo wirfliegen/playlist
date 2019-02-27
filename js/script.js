@@ -141,7 +141,7 @@ $("#add").click(function() {
     var imageLink = $("#image").val();
     var songLength = $("#length").val();
     var songLink = $("#link").val();
-    var game = $("game").val();
+    var game = $("#game").val();
     
     songs.push(songName);
     images_links.push(artistName);
